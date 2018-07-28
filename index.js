@@ -1,14 +1,24 @@
 'use strict';
 
-module.exports = function range(start, end) {
-  if (start > end) {
-    return null;
+module.exports = function range(start, end, step = 1) {
+  if (start == end) {
+    return [start];
   }
-  else {
-    let tab = [];
-    for (let i = start; i <= end; i++) {
+
+  let tab = [];
+  if (start < end) {
+    for (let i = start; i <= end; i += step) {
       tab.push(i);
     }
-    return tab;
   }
+  else {
+    // e.g.: range(3, -3)
+    if (step > 0)
+      step *= -1;
+
+    for (let i = start; i >= end; i += step) {
+      tab.push(i);
+    }
+  }
+  return tab;
 }

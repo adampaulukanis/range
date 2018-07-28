@@ -4,7 +4,7 @@
   "description": "Return array containing all numbers from _start_ up to (including) _end_",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha test.js"
   },
   "repository": {
     "type": "git",
