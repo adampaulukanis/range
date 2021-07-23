@@ -35,4 +35,6 @@ describe("check range", () => {
     it("if start < end than step should be -1 even if not provided: range(3, -3)", () => {
         assert.deepEqual(range(3, -3), [3, 2, 1, 0, -1, -2, -3]);
     });
+
+it("what happens when rande(10)?");
 });
